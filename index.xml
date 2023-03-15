@@ -4,15 +4,15 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1986191999@qq.com (iimer)</managingEditor>
-            <webMaster>1986191999@qq.com (iimer)</webMaster><lastBuildDate>Tue, 14 Mar 2023 22:47:15 &#43;0800</lastBuildDate>
+            <webMaster>1986191999@qq.com (iimer)</webMaster><lastBuildDate>Wed, 15 Mar 2023 09:42:02 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>First_post</title>
-    <link>http://example.org/posts/first_post/</link>
-    <pubDate>Tue, 14 Mar 2023 22:47:15 &#43;0800</pubDate>
+    <title>hugo的使用</title>
+    <link>http://example.org/posts/hugo%E4%BD%BF%E7%94%A8/</link>
+    <pubDate>Wed, 15 Mar 2023 09:42:02 &#43;0800</pubDate>
     <author>iimer</author>
-    <guid>http://example.org/posts/first_post/</guid>
-    <description><![CDATA[sadasd]]></description>
+    <guid>http://example.org/posts/hugo%E4%BD%BF%E7%94%A8/</guid>
+    <description><![CDATA[环境准备 (hugo中文网) hugo git 新建项目 hugo new site [项目名称] 进入项目根目录 # 本地启动 hugo server 新建文件 进入项目根目录 hugo new [文件名] 新文件默认为草稿，对]]></description>
 </item>
 </channel>
 </rss>
