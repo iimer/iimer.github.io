@@ -1,8 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - Category - 我的全新 Hugo 网站</title>
+        <title>Categories - 分类 - IIMER的博客站点</title>
         <link>http://example.org/categories/</link>
-        <description>Categories - Category - 我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1986191999@qq.com (iimer)</managingEditor>
-            <webMaster>1986191999@qq.com (iimer)</webMaster><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /></channel>
+        <description>Categories - 分类 - IIMER的博客站点</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1986191999@qq.com (IIMER)</managingEditor>
+            <webMaster>1986191999@qq.com (IIMER)</webMaster><lastBuildDate>Wed, 15 Mar 2023 09:42:02 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>tools</title>
+    <link>http://example.org/categories/tools/</link>
+    <pubDate>Wed, 15 Mar 2023 09:42:02 &#43;0800</pubDate>
+    <author>IIMER</author>
+    <guid>http://example.org/categories/tools/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>
