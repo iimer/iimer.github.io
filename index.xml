@@ -8,10 +8,10 @@
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>hugo的使用</title>
-    <link>http://example.org/posts/huge%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+    <link>http://example.org/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
     <pubDate>Wed, 15 Mar 2023 09:42:02 &#43;0800</pubDate>
     <author>iimer</author>
-    <guid>http://example.org/posts/huge%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+    <guid>http://example.org/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
     <description><![CDATA[环境准备 (hugo中文网) hugo git 新建项目 hugo new site [项目名称] 进入项目根目录 # 本地启动 hugo server 新建文件 进入项目根目录 hugo new [文件名] 新文件默认为草稿，对]]></description>
 </item>
 </channel>
