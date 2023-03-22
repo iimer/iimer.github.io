@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>接口安全的方式 - IIMER的博客站点</title><meta name="Description" content="如今解决接口安全的方法总结。"><meta property="og:title" content="接口安全的方式" />
+<meta property="og:description" content="如今解决接口安全的方法总结。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B9%E5%BC%8F/" />
+<meta property="article:published_time" content="2023-03-17T15:16:38+08:00" />
+<meta property="article:modified_time" content="2023-03-17T15:16:38+08:00" /><meta property="og:site_name" content="IIMER的技术博客" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="接口安全的方式"/>
+<meta name="twitter:description" content="如今解决接口安全的方法总结。"/>
+<meta name="application-name" content="IIMER的博客站点">
+<meta name="apple-mobile-web-app-title" content="IIMER的博客站点"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B9%E5%BC%8F/" /><link rel="prev" href="http://example.org/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/" /><link rel="next" href="http://example.org/posts/http%E5%92%8Chttps/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "接口安全的方式",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B9%E5%BC%8F\/"
+        },"genre": "posts","keywords": "安全","wordcount":  1454 ,
+        "url": "http:\/\/example.org\/posts\/%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B9%E5%BC%8F\/","datePublished": "2023-03-17T15:16:38+08:00","dateModified": "2023-03-17T15:16:38+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "IIMER"
+            },"description": "如今解决接口安全的方法总结。"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="IIMER的博客站点">IIMER的博客站点</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="IIMER的博客站点">IIMER的博客站点</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">接口安全的方式</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/iimer" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>IIMER</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AE%89%E5%85%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>安全</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-17">2023-03-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1454 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#如何保证数据安全">如何保证数据安全</a>
+      <ul>
+        <li><a href="#数据涉及的point">数据涉及的point</a></li>
+        <li><a href="#安全措施">安全措施</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p>数据安全是现在越来越注重的话题，进入一家企业工作，清楚数据安全的处理机制对接口开发有着不小的帮助。</p>
+<h2 id="如何保证数据安全">如何保证数据安全</h2>
+<h3 id="数据涉及的point">数据涉及的point</h3>
+<ul>
+<li>
+<p>数据传输的过程</p>
+<p>考虑的是<strong>不被窃听、篡改、冒充</strong></p>
+</li>
+<li>
+<p>服务端接收数据</p>
+<p>考虑的是<strong>数据验证，身份验证和防止攻击（如<code>DoS</code>）</strong></p>
+</li>
+<li>
+<p>数据库存储</p>
+<p>考虑的是<strong>脱敏数据（如密码）</strong></p>
+</li>
+</ul>
+<h3 id="安全措施">安全措施</h3>
+<h4 id="数据加密算法">数据加密算法</h4>
+<p>比较简单的是<strong>对称加密算法</strong>（如==AES==），<strong>哈希算法</strong>（如==MD5==）。</p>
+<blockquote>
+<p>对称加密：加解密都用相同的密钥。</p>
+</blockquote>
+<p>对称加密算法，在传输过程中会将密钥发给服务器端，假如<strong>数据被截获</strong>，那么数据和密钥都会被拿到，加密后的数据就可以被解密。不够安全。</p>
+<p>更为安全和常用的是<strong>非对称加密算法</strong>（如==RSA==、==SM2==）。</p>
+<blockquote>
+<p>非对称加密：公钥加密，私钥解密，成对出现。</p>
+</blockquote>
+<p>但是非对称加密算法有个问题，公钥只具备加密功能，私钥只具备解密功能，所以这只有从浏览器发请求给服务器端的时候才会加密。</p>
+<p>而实现请求和响应都加密，则需要配合对称加密算法，<strong>https</strong>便是如此。</p>
+<p><a href="iimer.github.io/posts/HTTP%e5%92%8cHTTPS" rel="">HTTP和HTTPS的内容介绍和对比</a></p>
+<h4 id="数据加签验签">数据加签验签</h4>
+<p>HTTPS在某些情况下，传输中是可能被篡改信息的。</p>
+<p>加签验签是一种防止被篡改的校验。</p>
+<p>该过程中，主要涉及</p>
+<ul>
+<li>原始报文</li>
+<li>加密后的报文</li>
+<li>用私钥二次加密的签名，==sign==</li>
+</ul>
+<p>验证是否被篡改，主要是靠<strong>私钥加密，公钥解密</strong>。</p>
+<p><strong>过程如下</strong></p>
+<p>客户端加签：原始报文-&gt;hash算法加密-&gt;私钥加密得到sign</p>
+<p>发送 原始报文 + sign</p>
+<p>服务端验签：<strong>原始报文-&gt;hash算法加密</strong>  和  <strong>公钥解密sign的值</strong>比对，如果相等，那就没被篡改过。</p>
+<blockquote>
+<p>假如hacker用公钥解密了sign，但是他篡改后无法得到相应的加密后的sign，在服务器端不会通过。但他在一定程度下还是可以实现窃听。</p>
+<p>假如hacker通过客户端得到了私钥，那也就不安全了。</p>
+</blockquote>
+<h4 id="token授权认证">token授权认证</h4>
+<p><strong>过程如下</strong></p>
+<ol>
+<li>用户输入用户名和密码，发起请求。</li>
+<li>校验通过，生成唯一token，存在redis中，返回给客户端。</li>
+<li>对特定的业务请求中，携带token信息，发送给服务器端。</li>
+<li>服务器端收到token信息，得到对应的用户，进行业务操作。</li>
+</ol>
+<blockquote>
+<p>token只保证身份验证，但传输过程中的安全性，需要靠别的技术保证。</p>
+</blockquote>
+<p><strong>如何保证token的安全</strong></p>
+<ul>
+<li>设置有效期</li>
+<li>加密策略，如https、加签验签</li>
+<li>设置白名单</li>
+</ul>
+<h4 id="请求超时机制">请求超时机制</h4>
+<p>有的hacker不在乎信息是啥，直接将该请求信息拿出来无限发请求给后端，进行DOS攻击。</p>
+<p>引入超时机制，让时间差大于一定时间的请求无效。</p>
+<h4 id="nonce防止重放攻击">nonce防止重放攻击</h4>
+<p>如果时间差内，hacker进行重放攻击，请求超时机制就没用了。</p>
+<p>让每个请求有个唯一被标识的字段==nonce==，每次请求后，服务器端存储该==nonce==，放在Set集合或者缓存或者数据库中，如果已存在则认为非法。</p>
+<p>不可能记录所有请求==nonce==，数据量太大，所以需要结合请求超时机制，记录时间差内的标识即可。</p>
+<h4 id="限流机制">限流机制</h4>
+<p>以上Dos攻击是由hacker发送的，默认不可以自己创建新的请求，而如果是用户自己反复点击创建新的请求，则也会有Dos风险。</p>
+<p>可以使用<code>Guava</code>的<code>RateLimiter</code>单机版限流，也可以使用<code>Redis</code>分布式限流，还可以使用阿里开源组件<code>sentinel</code>限流。比如说，一分钟可以接受多少次请求。</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=Mzg3NzU5NTIwNg==&amp;mid=2247490393&amp;idx=1&amp;sn=98189caa486406f8fa94d84ba0667604&amp;chksm=cf21c470f8564d665ce04ccb9dc7502633246da87a0541b07ba4ac99423b28ce544cdd6c036b&amp;token=162724582&amp;lang=zh_CN&amp;scene=21#wechat_redirect" target="_blank" rel="noopener noreffer ">经典限流算法</a></p>
+<h4 id="黑名单机制">黑名单机制</h4>
+<p>对黑名单发起的请求，直接认为非法。</p>
+<h4 id="白名单机制">白名单机制</h4>
+<p>可以只让特定的IP访问系统，如新客户都需要申请白名单之后，才可以进行访问。</p>
+<h4 id="面向开发的数据脱敏">面向开发的数据脱敏</h4>
+<p>日志和数据库中的敏感信息，都应该加密存储和显示。</p>
+<h4 id="数据参数一些合法性校验">数据参数一些合法性校验</h4>
+<p>服务器端应该还有相应的<strong>参数校验</strong>，如手机号，身份证等。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-03-17</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%AE%89%E5%85%A8/">安全</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/" class="prev" rel="prev" title="hugo的使用"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>hugo的使用</a>
+            <a href="/posts/http%E5%92%8Chttps/" class="next" rel="next" title="HTTP和HTTPS">HTTP和HTTPS<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"> 
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/iimer" target="_blank">IIMER</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

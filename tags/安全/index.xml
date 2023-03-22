@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>安全 - 标签 - IIMER的博客站点</title>
+        <link>http://example.org/tags/%E5%AE%89%E5%85%A8/</link>
+        <description>安全 - 标签 - IIMER的博客站点</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1986191999@qq.com (IIMER)</managingEditor>
+            <webMaster>1986191999@qq.com (IIMER)</webMaster><lastBuildDate>Tue, 21 Mar 2023 10:19:38 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E5%AE%89%E5%85%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>身份认证与授权</title>
+    <link>http://example.org/posts/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/</link>
+    <pubDate>Tue, 21 Mar 2023 10:19:38 &#43;0800</pubDate>
+    <author>IIMER</author>
+    <guid>http://example.org/posts/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/</guid>
+    <description><![CDATA[认证、授权和凭证是什么？ 认证 通过某种方式，验证了当前用户的身份 功能侧： 用户名密码登录 手机号接收验证码 邮箱验证码 指纹识别 人脸识别 授权 用户授予第]]></description>
+</item>
+<item>
+    <title>接口安全的方式</title>
+    <link>http://example.org/posts/%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B9%E5%BC%8F/</link>
+    <pubDate>Fri, 17 Mar 2023 15:16:38 &#43;0800</pubDate>
+    <author>IIMER</author>
+    <guid>http://example.org/posts/%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B9%E5%BC%8F/</guid>
+    <description><![CDATA[前言 数据安全是现在越来越注重的话题，进入一家企业工作，清楚数据安全的处理机制对接口开发有着不小的帮助。 如何保证数据安全 数据涉及的point 数]]></description>
+</item>
+</channel>
+</rss>

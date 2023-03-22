@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>计算机网络 - 标签 - IIMER的博客站点</title>
+        <link>http://example.org/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+        <description>计算机网络 - 标签 - IIMER的博客站点</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1986191999@qq.com (IIMER)</managingEditor>
+            <webMaster>1986191999@qq.com (IIMER)</webMaster><lastBuildDate>Mon, 20 Mar 2023 10:09:38 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="self" type="application/rss+xml" /><item>
+    <title>HTTP和HTTPS</title>
+    <link>http://example.org/posts/http%E5%92%8Chttps/</link>
+    <pubDate>Mon, 20 Mar 2023 10:09:38 &#43;0800</pubDate>
+    <author>IIMER</author>
+    <guid>http://example.org/posts/http%E5%92%8Chttps/</guid>
+    <description><![CDATA[HTTP HTTP是什么？ HTTP，又称为超文本传输协议。 https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&amp;mid=2247483971&amp;idx=1&amp;sn=8f2d5dae3d95efc446061b352c8e9961&amp;scene=21#wechat_redirect 存在的风险 HTTP 由于是明文传输，所以随意使用一个抓包工具都可以截获通信的内容。 所以就有以下三]]></description>
+</item>
+</channel>
+</rss>

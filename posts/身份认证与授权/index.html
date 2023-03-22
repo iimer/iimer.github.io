@@ -4,36 +4,36 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>hugo的使用 - IIMER的博客站点</title><meta name="Description" content="hugo的搭建、部署、主题切换和日常运用。"><meta property="og:title" content="hugo的使用" />
-<meta property="og:description" content="hugo的搭建、部署、主题切换和日常运用。" />
+        <title>身份认证与授权 - IIMER的博客站点</title><meta name="Description" content="身份认证与授权的方式总结。"><meta property="og:title" content="身份认证与授权" />
+<meta property="og:description" content="身份认证与授权的方式总结。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/" />
-<meta property="article:published_time" content="2023-03-15T09:42:02+08:00" />
-<meta property="article:modified_time" content="2023-03-15T09:42:02+08:00" /><meta property="og:site_name" content="IIMER的技术博客" />
+<meta property="og:url" content="http://example.org/posts/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/" />
+<meta property="article:published_time" content="2023-03-21T10:19:38+08:00" />
+<meta property="article:modified_time" content="2023-03-21T10:19:38+08:00" /><meta property="og:site_name" content="IIMER的技术博客" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="hugo的使用"/>
-<meta name="twitter:description" content="hugo的搭建、部署、主题切换和日常运用。"/>
+<meta name="twitter:title" content="身份认证与授权"/>
+<meta name="twitter:description" content="身份认证与授权的方式总结。"/>
 <meta name="application-name" content="IIMER的博客站点">
 <meta name="apple-mobile-web-app-title" content="IIMER的博客站点"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/hugo%E7%9A%84%E4%BD%BF%E7%94%A8/" /><link rel="prev" href="http://example.org/posts/%E4%BC%81%E4%B8%9A%E6%A1%86%E6%9E%B6/" /><link rel="next" href="http://example.org/posts/%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B9%E5%BC%8F/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/" /><link rel="prev" href="http://example.org/posts/http%E5%92%8Chttps/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "hugo的使用",
+        "headline": "身份认证与授权",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/example.org\/posts\/hugo%E7%9A%84%E4%BD%BF%E7%94%A8\/"
-        },"genre": "posts","keywords": "tools, hugo","wordcount":  748 ,
-        "url": "http:\/\/example.org\/posts\/hugo%E7%9A%84%E4%BD%BF%E7%94%A8\/","datePublished": "2023-03-15T09:42:02+08:00","dateModified": "2023-03-15T09:42:02+08:00","publisher": {
+            "@id": "http:\/\/example.org\/posts\/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83\/"
+        },"genre": "posts","keywords": "安全, 身份认证与授权","wordcount":  653 ,
+        "url": "http:\/\/example.org\/posts\/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83\/","datePublished": "2023-03-21T10:19:38+08:00","dateModified": "2023-03-21T10:19:38+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "IIMER"
-            },"description": "hugo的搭建、部署、主题切换和日常运用。"
+            },"description": "身份认证与授权的方式总结。"
     }
     </script></head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -99,9 +99,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">hugo的使用</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/iimer" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>IIMER</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tools/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>tools</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-15">2023-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 748 字&nbsp;
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">身份认证与授权</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/iimer" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>IIMER</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AE%89%E5%85%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>安全</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-21">2023-03-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 653 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -110,99 +110,128 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#环境准备">环境准备</a></li>
-    <li><a href="#新建项目">新建项目</a></li>
-    <li><a href="#新建文件">新建文件</a></li>
-    <li><a href="#引入主题">引入主题</a>
+    <li><a href="#认证授权和凭证是什么">认证、授权和凭证是什么？</a>
       <ul>
-        <li><a href="#基本套路">基本套路</a></li>
-        <li><a href="#loveit">LoveIt</a></li>
+        <li><a href="#认证">认证</a></li>
+        <li><a href="#授权">授权</a></li>
+        <li><a href="#凭证">凭证</a></li>
       </ul>
     </li>
-    <li><a href="#部署发布">部署发布</a>
+    <li><a href="#cookie">Cookie、</a>
       <ul>
-        <li><a href="#部署github">部署github</a></li>
+        <li><a href="#cookie-1">Cookie</a></li>
       </ul>
     </li>
-    <li><a href="#分离项目">分离项目</a></li>
-    <li><a href="#图片资源">图片资源</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="环境准备">环境准备</h2>
-<p>(<a href="https://www.gohugo.cn/getting-started/quick-start/" target="_blank" rel="noopener noreffer ">hugo中文网</a>)</p>
-<p><a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer ">hugo</a></p>
-<p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener noreffer ">git</a></p>
-<h2 id="新建项目">新建项目</h2>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo new site <span class="o">[</span>项目名称<span class="o">]</span>
-</code></pre></div><p>进入项目根目录</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 本地启动</span>
-hugo server
-</code></pre></div><h2 id="新建文件">新建文件</h2>
-<p>进入项目根目录</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo new <span class="o">[</span>文件名<span class="o">]</span>
-</code></pre></div><p>新文件默认为草稿，对应draft: true。可以修改模板文件。</p>
-<p>要想启动时显示该文件，需要加上参数-D或者将draft的值改为false。</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo server -D
-</code></pre></div><blockquote>
-<p>在创建完第一个文件后，可以在此文件目录下直接创建别的文件，不需要每次都敲代码。</p>
-<p>但必须保证开头的格式与第一个文件相同。</p>
-</blockquote>
-<h2 id="引入主题">引入主题</h2>
-<h3 id="基本套路">基本套路</h3>
-<ol>
+            </div><div class="content" id="content"><h2 id="认证授权和凭证是什么">认证、授权和凭证是什么？</h2>
+<h3 id="认证">认证</h3>
+<ul>
 <li>
-<p>下载对应github的zip包，并解压到项目themes目录下。</p>
+<p>通过某种方式，验证了当前用户的身份</p>
 </li>
 <li>
-<p>修改根目录下config.toml文件，指定对应的主题，如LoveIt。</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 更改使用 Hugo 构建网站时使用的默认主题</span>
-<span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;LoveIt&#34;</span>
-</code></pre></div></li>
-<li>
-<p>其余按照主题特定的文档修改即可。</p>
+<p>功能侧：</p>
+<ul>
+<li>用户名密码登录</li>
+<li>手机号接收验证码</li>
+<li>邮箱验证码</li>
+<li>指纹识别</li>
+<li>人脸识别</li>
+</ul>
 </li>
-</ol>
-<h3 id="loveit">LoveIt</h3>
-<p><a href="https://hugoloveit.com/zh-cn/theme-documentation-basics/" target="_blank" rel="noopener noreffer ">主题文档</a></p>
-<h2 id="部署发布">部署发布</h2>
-<h3 id="部署github">部署github</h3>
-<p>项目根目录下，生成public文件夹（页面的静态文件）</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo
-</code></pre></div><p>创建仓库，格式为：[github用户名].github.io，如下图：</p>
-<p><img
+</ul>
+<h3 id="授权">授权</h3>
+<ul>
+<li>用户授予第三方访问某些资源的权限
+<ul>
+<li>访问相册、地理位置</li>
+</ul>
+</li>
+</ul>
+<h3 id="凭证">凭证</h3>
+<ul>
+<li>类似现代生活的身份证，首次认证如用户名密码通过之后，就可以生成对应的凭证，进行认证。</li>
+</ul>
+<h2 id="cookie">Cookie、</h2>
+<h3 id="cookie-1">Cookie</h3>
+<ul>
+<li>HTTP是无状态的，需要维护一个状态来让服务器端知道请求来自同一个地方</li>
+<li>存储于客户端</li>
+<li>一个domain一个cookie，不可跨域</li>
+</ul>
+<p>浏览器控制台查看cookie：
+<img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="/lib/images/huge%E7%9A%84%E4%BD%BF%E7%94%A8/image-20230315112151399.png"
-        data-srcset="/lib/images/huge%E7%9A%84%E4%BD%BF%E7%94%A8/image-20230315112151399.png, /lib/images/huge%E7%9A%84%E4%BD%BF%E7%94%A8/image-20230315112151399.png 1.5x, /lib/images/huge%E7%9A%84%E4%BD%BF%E7%94%A8/image-20230315112151399.png 2x"
+        data-src="../../static/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png"
+        data-srcset="../../static/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png, ../../static/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png 1.5x, ../../static/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png 2x"
         data-sizes="auto"
-        alt="/lib/images/huge%E7%9A%84%E4%BD%BF%E7%94%A8/image-20230315112151399.png"
-        title="github创建仓库" /></p>
-<p>将public文件夹提交到此仓库，为git基础操作，不再记录。</p>
-<p>访问对应的地址，如：https://iimer.github.io/</p>
-<h2 id="分离项目">分离项目</h2>
-<p>一般我们记录博客是不会直接操作public里面的静态文件的，所以存储hugo项目才是最为重要的事情。</p>
-<p>分离主要是public和源hugo项目：</p>
-<ol>
-<li>public关联部署的库</li>
-<li>源hugo关联新库，并用.gitignore文件来隔离public文件夹。</li>
-</ol>
+        alt="../../static/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png"
+        title="image-20230321105713190" /></p>
 <blockquote>
-<p>在我们写完博客后，要将以上两个项目分别提交。</p>
+<p>Expires为Session，关闭该浏览器全部页面后，即结束浏览器这个应用时cookie重置。</p>
 </blockquote>
-<h2 id="图片资源">图片资源</h2>
-<p>因为生成public文件的规则，图片路径为/-lib/images/[filename]/&hellip;</p>
-<p>本地用的是typora，存的是相对路径，对应的是../../static/-lib/images/[filename]/&hellip;</p>
-<p>在必要时需要把文件目录互换：</p>
-<pre><code>/-lib/images
-&lt;-&gt;
-../../-static/lib/images
-</code></pre><blockquote>
-<p>多加一个 &lsquo;-&rsquo; ，是为了防止被覆盖</p>
-</blockquote></div><div class="post-footer" id="post-footer">
+<p>cookie一行属性含义：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>键值对的键</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>键值对的值</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>指定cookie该行所属域名，默认当前域名</td>
+</tr>
+<tr>
+<td>Path</td>
+<td>指定cookie该行在哪个路由下生效，默认&rsquo;/'。<!-- raw HTML omitted -->如设置/api，只有/api的路由可以拿到cookie的该行。</td>
+</tr>
+<tr>
+<td>Expires/MaxAge</td>
+<td>cookie失效时间，默认浏览器关闭就结束。</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>name+value的字节长度</td>
+</tr>
+<tr>
+<td>HttpOnly</td>
+<td>为true时，不可被js脚本访问。但还是可以在Application中手动修改cookie。</td>
+</tr>
+<tr>
+<td>Secure</td>
+<td>是否使用安全协议传输。<!-- raw HTML omitted -->true则在http中无效，只有在https中生效。</td>
+</tr>
+<tr>
+<td>SameSite</td>
+<td>用于防范CSRF攻击和用户追踪。<!-- raw HTML omitted -->分为三个值：Strict、Lax、None。<!-- raw HTML omitted -->Strict表示完全不会在第三方网站发cookie。<strong>Lax</strong>表示可以发一些请求的，标签为：a、link或者是表单的get请求。None则没有限制。</td>
+</tr>
+<tr>
+<td>Partition Key</td>
+<td></td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>优先级。当cookie的数量超出限制的时候，就会优先清楚低优先级的。</td>
+</tr>
+</tbody>
+</table>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2023-03-15</span>
+                <span>更新于 2023-03-21</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
@@ -215,14 +244,13 @@ hugo server
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/tools/">tools</a>,&nbsp;<a href="/tags/hugo/">hugo</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%AE%89%E5%85%A8/">安全</a>,&nbsp;<a href="/tags/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/">身份认证与授权</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E4%BC%81%E4%B8%9A%E6%A1%86%E6%9E%B6/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i></a>
-            <a href="/posts/%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B9%E5%BC%8F/" class="next" rel="next" title="接口安全的方式">接口安全的方式<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/posts/http%E5%92%8Chttps/" class="prev" rel="prev" title="HTTP和HTTPS"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>HTTP和HTTPS</a></div>
 </div>
 </article></div>
             </main><footer class="footer">
