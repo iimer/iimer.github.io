@@ -27,10 +27,10 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B9%E5%BC%8F\/"
-        },"genre": "posts","keywords": "安全","wordcount":  1454 ,
+        },"genre": "posts","keywords": "安全","wordcount":  1436 ,
         "url": "http:\/\/example.org\/posts\/%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B9%E5%BC%8F\/","datePublished": "2023-03-17T15:16:38+08:00","dateModified": "2023-03-17T15:16:38+08:00","publisher": {
             "@type": "Organization",
-            "name": ""},"author": {
+            "name": "IIMER"},"author": {
                 "@type": "Person",
                 "name": "IIMER"
             },"description": "如今解决接口安全的方法总结。"
@@ -98,10 +98,10 @@
     </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">接口安全的方式</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/iimer" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>IIMER</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AE%89%E5%85%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>安全</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-17">2023-03-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1454 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-17">2023-03-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1436 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -110,19 +110,32 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#如何保证数据安全">如何保证数据安全</a>
+    <li><a href="#1-前言">1 前言</a></li>
+    <li><a href="#2-如何保证数据安全">2 如何保证数据安全</a>
       <ul>
-        <li><a href="#数据涉及的point">数据涉及的point</a></li>
-        <li><a href="#安全措施">安全措施</a></li>
+        <li><a href="#21-数据涉及的point">2.1 数据涉及的point</a></li>
+        <li><a href="#22-安全措施">2.2 安全措施</a>
+          <ul>
+            <li><a href="#221-数据加密算法">2.2.1 数据加密算法</a></li>
+            <li><a href="#222-数据加签验签">2.2.2 数据加签验签</a></li>
+            <li><a href="#223-token授权认证">2.2.3 token授权认证</a></li>
+            <li><a href="#224-请求超时机制">2.2.4 请求超时机制</a></li>
+            <li><a href="#225-nonce防止重放攻击">2.2.5 nonce防止重放攻击</a></li>
+            <li><a href="#226-限流机制">2.2.6 限流机制</a></li>
+            <li><a href="#227-黑名单机制">2.2.7 黑名单机制</a></li>
+            <li><a href="#228-白名单机制">2.2.8 白名单机制</a></li>
+            <li><a href="#229-面向开发的数据脱敏">2.2.9 面向开发的数据脱敏</a></li>
+            <li><a href="#2210-数据参数一些合法性校验">2.2.10 数据参数一些合法性校验</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+            </div><div class="content" id="content"><h2 id="1-前言">1 前言</h2>
 <p>数据安全是现在越来越注重的话题，进入一家企业工作，清楚数据安全的处理机制对接口开发有着不小的帮助。</p>
-<h2 id="如何保证数据安全">如何保证数据安全</h2>
-<h3 id="数据涉及的point">数据涉及的point</h3>
+<h2 id="2-如何保证数据安全">2 如何保证数据安全</h2>
+<h3 id="21-数据涉及的point">2.1 数据涉及的point</h3>
 <ul>
 <li>
 <p>数据传输的过程</p>
@@ -137,28 +150,28 @@
 <p>考虑的是<strong>脱敏数据（如密码）</strong></p>
 </li>
 </ul>
-<h3 id="安全措施">安全措施</h3>
-<h4 id="数据加密算法">数据加密算法</h4>
-<p>比较简单的是<strong>对称加密算法</strong>（如==AES==），<strong>哈希算法</strong>（如==MD5==）。</p>
+<h3 id="22-安全措施">2.2 安全措施</h3>
+<h4 id="221-数据加密算法">2.2.1 数据加密算法</h4>
+<p>比较简单的是<strong>对称加密算法</strong>（如<code>AES</code>），<strong>哈希算法</strong>（如<code>MD5</code>）。</p>
 <blockquote>
 <p>对称加密：加解密都用相同的密钥。</p>
 </blockquote>
 <p>对称加密算法，在传输过程中会将密钥发给服务器端，假如<strong>数据被截获</strong>，那么数据和密钥都会被拿到，加密后的数据就可以被解密。不够安全。</p>
-<p>更为安全和常用的是<strong>非对称加密算法</strong>（如==RSA==、==SM2==）。</p>
+<p>更为安全和常用的是<strong>非对称加密算法</strong>（如<code>RSA</code>、<code>SM2</code>）。</p>
 <blockquote>
 <p>非对称加密：公钥加密，私钥解密，成对出现。</p>
 </blockquote>
 <p>但是非对称加密算法有个问题，公钥只具备加密功能，私钥只具备解密功能，所以这只有从浏览器发请求给服务器端的时候才会加密。</p>
 <p>而实现请求和响应都加密，则需要配合对称加密算法，<strong>https</strong>便是如此。</p>
 <p><a href="iimer.github.io/posts/HTTP%e5%92%8cHTTPS" rel="">HTTP和HTTPS的内容介绍和对比</a></p>
-<h4 id="数据加签验签">数据加签验签</h4>
+<h4 id="222-数据加签验签">2.2.2 数据加签验签</h4>
 <p>HTTPS在某些情况下，传输中是可能被篡改信息的。</p>
 <p>加签验签是一种防止被篡改的校验。</p>
 <p>该过程中，主要涉及</p>
 <ul>
 <li>原始报文</li>
 <li>加密后的报文</li>
-<li>用私钥二次加密的签名，==sign==</li>
+<li>用私钥二次加密的签名，<code>sign</code></li>
 </ul>
 <p>验证是否被篡改，主要是靠<strong>私钥加密，公钥解密</strong>。</p>
 <p><strong>过程如下</strong></p>
@@ -169,7 +182,7 @@
 <p>假如hacker用公钥解密了sign，但是他篡改后无法得到相应的加密后的sign，在服务器端不会通过。但他在一定程度下还是可以实现窃听。</p>
 <p>假如hacker通过客户端得到了私钥，那也就不安全了。</p>
 </blockquote>
-<h4 id="token授权认证">token授权认证</h4>
+<h4 id="223-token授权认证">2.2.3 token授权认证</h4>
 <p><strong>过程如下</strong></p>
 <ol>
 <li>用户输入用户名和密码，发起请求。</li>
@@ -186,24 +199,24 @@
 <li>加密策略，如https、加签验签</li>
 <li>设置白名单</li>
 </ul>
-<h4 id="请求超时机制">请求超时机制</h4>
+<h4 id="224-请求超时机制">2.2.4 请求超时机制</h4>
 <p>有的hacker不在乎信息是啥，直接将该请求信息拿出来无限发请求给后端，进行DOS攻击。</p>
 <p>引入超时机制，让时间差大于一定时间的请求无效。</p>
-<h4 id="nonce防止重放攻击">nonce防止重放攻击</h4>
+<h4 id="225-nonce防止重放攻击">2.2.5 nonce防止重放攻击</h4>
 <p>如果时间差内，hacker进行重放攻击，请求超时机制就没用了。</p>
-<p>让每个请求有个唯一被标识的字段==nonce==，每次请求后，服务器端存储该==nonce==，放在Set集合或者缓存或者数据库中，如果已存在则认为非法。</p>
-<p>不可能记录所有请求==nonce==，数据量太大，所以需要结合请求超时机制，记录时间差内的标识即可。</p>
-<h4 id="限流机制">限流机制</h4>
+<p>让每个请求有个唯一被标识的字段<code>nonce</code>，每次请求后，服务器端存储该<code>nonce</code>，放在Set集合或者缓存或者数据库中，如果已存在则认为非法。</p>
+<p>不可能记录所有请求<code>nonce</code>，数据量太大，所以需要结合请求超时机制，记录时间差内的标识即可。</p>
+<h4 id="226-限流机制">2.2.6 限流机制</h4>
 <p>以上Dos攻击是由hacker发送的，默认不可以自己创建新的请求，而如果是用户自己反复点击创建新的请求，则也会有Dos风险。</p>
 <p>可以使用<code>Guava</code>的<code>RateLimiter</code>单机版限流，也可以使用<code>Redis</code>分布式限流，还可以使用阿里开源组件<code>sentinel</code>限流。比如说，一分钟可以接受多少次请求。</p>
 <p><a href="https://mp.weixin.qq.com/s?__biz=Mzg3NzU5NTIwNg==&amp;mid=2247490393&amp;idx=1&amp;sn=98189caa486406f8fa94d84ba0667604&amp;chksm=cf21c470f8564d665ce04ccb9dc7502633246da87a0541b07ba4ac99423b28ce544cdd6c036b&amp;token=162724582&amp;lang=zh_CN&amp;scene=21#wechat_redirect" target="_blank" rel="noopener noreffer ">经典限流算法</a></p>
-<h4 id="黑名单机制">黑名单机制</h4>
+<h4 id="227-黑名单机制">2.2.7 黑名单机制</h4>
 <p>对黑名单发起的请求，直接认为非法。</p>
-<h4 id="白名单机制">白名单机制</h4>
+<h4 id="228-白名单机制">2.2.8 白名单机制</h4>
 <p>可以只让特定的IP访问系统，如新客户都需要申请白名单之后，才可以进行访问。</p>
-<h4 id="面向开发的数据脱敏">面向开发的数据脱敏</h4>
+<h4 id="229-面向开发的数据脱敏">2.2.9 面向开发的数据脱敏</h4>
 <p>日志和数据库中的敏感信息，都应该加密存储和显示。</p>
-<h4 id="数据参数一些合法性校验">数据参数一些合法性校验</h4>
+<h4 id="2210-数据参数一些合法性校验">2.2.10 数据参数一些合法性校验</h4>
 <p>服务器端应该还有相应的<strong>参数校验</strong>，如手机号，身份证等。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -243,5 +256,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

@@ -10,7 +10,7 @@
     <pubDate>Tue, 21 Mar 2023 10:19:38 &#43;0800</pubDate>
     <author>IIMER</author>
     <guid>http://example.org/posts/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/</guid>
-    <description><![CDATA[认证、授权和凭证是什么？ 认证 通过某种方式，验证了当前用户的身份 功能侧： 用户名密码登录 手机号接收验证码 邮箱验证码 指纹识别 人脸识别 授权 用户授予第]]></description>
+    <description><![CDATA[1 认证、授权和凭证是什么？ 1.1 认证 通过某种方式，验证了当前用户的身份 功能侧： 用户名密码登录 手机号接收验证码 邮箱验证码 指纹识别 人脸识别 1.2 授权 用户]]></description>
 </item>
 </channel>
 </rss>

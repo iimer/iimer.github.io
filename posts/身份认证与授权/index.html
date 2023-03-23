@@ -16,7 +16,7 @@
 <meta name="application-name" content="IIMER的博客站点">
 <meta name="apple-mobile-web-app-title" content="IIMER的博客站点"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/" /><link rel="prev" href="http://example.org/posts/http%E5%92%8Chttps/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/" /><link rel="prev" href="http://example.org/posts/http%E5%92%8Chttps/" /><link rel="next" href="http://example.org/posts/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -27,10 +27,10 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83\/"
-        },"genre": "posts","keywords": "安全, 身份认证与授权","wordcount":  653 ,
+        },"genre": "posts","keywords": "安全, 身份认证与授权","wordcount":  659 ,
         "url": "http:\/\/example.org\/posts\/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83\/","datePublished": "2023-03-21T10:19:38+08:00","dateModified": "2023-03-21T10:19:38+08:00","publisher": {
             "@type": "Organization",
-            "name": ""},"author": {
+            "name": "IIMER"},"author": {
                 "@type": "Person",
                 "name": "IIMER"
             },"description": "身份认证与授权的方式总结。"
@@ -98,10 +98,10 @@
     </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">身份认证与授权</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/iimer" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>IIMER</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AE%89%E5%85%A8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>安全</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-21">2023-03-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 653 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-21">2023-03-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 659 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -110,22 +110,22 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#认证授权和凭证是什么">认证、授权和凭证是什么？</a>
+    <li><a href="#1-认证授权和凭证是什么">1 认证、授权和凭证是什么？</a>
       <ul>
-        <li><a href="#认证">认证</a></li>
-        <li><a href="#授权">授权</a></li>
-        <li><a href="#凭证">凭证</a></li>
+        <li><a href="#11-认证">1.1 认证</a></li>
+        <li><a href="#12-授权">1.2 授权</a></li>
+        <li><a href="#13-凭证">1.3 凭证</a></li>
       </ul>
     </li>
-    <li><a href="#cookie">Cookie、</a>
+    <li><a href="#2-cookie">2 Cookie、</a>
       <ul>
-        <li><a href="#cookie-1">Cookie</a></li>
+        <li><a href="#21-cookie">2.1 Cookie</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="认证授权和凭证是什么">认证、授权和凭证是什么？</h2>
-<h3 id="认证">认证</h3>
+            </div><div class="content" id="content"><h2 id="1-认证授权和凭证是什么">1 认证、授权和凭证是什么？</h2>
+<h3 id="11-认证">1.1 认证</h3>
 <ul>
 <li>
 <p>通过某种方式，验证了当前用户的身份</p>
@@ -141,7 +141,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="授权">授权</h3>
+<h3 id="12-授权">1.2 授权</h3>
 <ul>
 <li>用户授予第三方访问某些资源的权限
 <ul>
@@ -149,12 +149,12 @@
 </ul>
 </li>
 </ul>
-<h3 id="凭证">凭证</h3>
+<h3 id="13-凭证">1.3 凭证</h3>
 <ul>
 <li>类似现代生活的身份证，首次认证如用户名密码通过之后，就可以生成对应的凭证，进行认证。</li>
 </ul>
-<h2 id="cookie">Cookie、</h2>
-<h3 id="cookie-1">Cookie</h3>
+<h2 id="2-cookie">2 Cookie、</h2>
+<h3 id="21-cookie">2.1 Cookie</h3>
 <ul>
 <li>HTTP是无状态的，需要维护一个状态来让服务器端知道请求来自同一个地方</li>
 <li>存储于客户端</li>
@@ -164,10 +164,10 @@
 <img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="../../static/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png"
-        data-srcset="../../static/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png, ../../static/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png 1.5x, ../../static/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png 2x"
+        data-src="/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png"
+        data-srcset="/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png, /lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png 1.5x, /lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png 2x"
         data-sizes="auto"
-        alt="../../static/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png"
+        alt="/lib/images/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/image-20230321105713190.png"
         title="image-20230321105713190" /></p>
 <blockquote>
 <p>Expires为Session，关闭该浏览器全部页面后，即结束浏览器这个应用时cookie重置。</p>
@@ -250,7 +250,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/http%E5%92%8Chttps/" class="prev" rel="prev" title="HTTP和HTTPS"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>HTTP和HTTPS</a></div>
+    <div class="post-nav"><a href="/posts/http%E5%92%8Chttps/" class="prev" rel="prev" title="HTTP和HTTPS"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>HTTP和HTTPS</a>
+            <a href="/posts/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="next" rel="next" title="动态规划">动态规划<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
@@ -264,5 +265,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

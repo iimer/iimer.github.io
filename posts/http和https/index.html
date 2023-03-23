@@ -30,7 +30,7 @@
         },"genre": "posts","keywords": "计算机网络","wordcount":  716 ,
         "url": "http:\/\/example.org\/posts\/http%E5%92%8Chttps\/","datePublished": "2023-03-20T10:09:38+08:00","dateModified": "2023-03-20T10:09:38+08:00","publisher": {
             "@type": "Organization",
-            "name": ""},"author": {
+            "name": "IIMER"},"author": {
                 "@type": "Person",
                 "name": "IIMER"
             },"description": "HTTP和HTTPS的内容介绍和对比。"
@@ -98,7 +98,7 @@
     </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">HTTP和HTTPS</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/iimer" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>IIMER</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>计算机网络</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-20">2023-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 716 字&nbsp;
@@ -110,20 +110,20 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#http">HTTP</a>
+    <li><a href="#1-http">1 HTTP</a>
       <ul>
-        <li><a href="#http是什么">HTTP是什么？</a></li>
-        <li><a href="#存在的风险">存在的风险</a></li>
+        <li><a href="#11-http是什么">1.1 HTTP是什么？</a></li>
+        <li><a href="#12-存在的风险">1.2 存在的风险</a></li>
       </ul>
     </li>
-    <li><a href="#https">HTTPS</a></li>
+    <li><a href="#2-https">2 HTTPS</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="http">HTTP</h2>
-<h3 id="http是什么">HTTP是什么？</h3>
+            </div><div class="content" id="content"><h2 id="1-http">1 HTTP</h2>
+<h3 id="11-http是什么">1.1 HTTP是什么？</h3>
 <p>HTTP，又称为超文本传输协议。</p>
 <p><a href="https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&amp;mid=2247483971&amp;idx=1&amp;sn=8f2d5dae3d95efc446061b352c8e9961&amp;scene=21#wechat_redirect">https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&amp;mid=2247483971&amp;idx=1&amp;sn=8f2d5dae3d95efc446061b352c8e9961&amp;scene=21#wechat_redirect</a></p>
-<h3 id="存在的风险">存在的风险</h3>
+<h3 id="12-存在的风险">1.2 存在的风险</h3>
 <p>HTTP 由于是明文传输，所以随意使用一个抓包工具都可以截获通信的内容。</p>
 <p>所以就有以下三种风险：</p>
 <ul>
@@ -131,7 +131,7 @@
 <li>篡改风险</li>
 <li>冒充风险</li>
 </ul>
-<h2 id="https">HTTPS</h2>
+<h2 id="2-https">2 HTTPS</h2>
 <p>HTTPS，也成为HTTP over TLS，TLS前身是SSL，有各种版本。</p>
 <p>https请求的流程如下：</p>
 <ol>
@@ -152,7 +152,7 @@
 <p>保证了同一连接下端到端的数据安全，<strong>身份认证和识别不会在此保证</strong>。</p>
 <p>内容会有完整性校验。</p>
 <p>客户端和服务器端都不会被伪造。</p>
-<p>且在浏览器端的控制台是可以看到加密前的数据的，如果有密码这样的敏感数据，需要再用==RSA==进行单独加密。</p>
+<p>且在浏览器端的控制台是可以看到加密前的数据的，如果有密码这样的敏感数据，需要再用<code>RSA</code>进行单独加密。</p>
 <blockquote>
 <p>证书是需要申请的，可以对应*.baidu.com这样的通用域名，然后部署到对应的服务器上就可以使用HTTPS了。</p>
 </blockquote>
@@ -195,5 +195,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

@@ -27,10 +27,10 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/hugo%E7%9A%84%E4%BD%BF%E7%94%A8\/"
-        },"genre": "posts","keywords": "tools, hugo","wordcount":  748 ,
+        },"genre": "posts","keywords": "tools, hugo","wordcount":  758 ,
         "url": "http:\/\/example.org\/posts\/hugo%E7%9A%84%E4%BD%BF%E7%94%A8\/","datePublished": "2023-03-15T09:42:02+08:00","dateModified": "2023-03-15T09:42:02+08:00","publisher": {
             "@type": "Organization",
-            "name": ""},"author": {
+            "name": "IIMER"},"author": {
                 "@type": "Person",
                 "name": "IIMER"
             },"description": "hugo的搭建、部署、主题切换和日常运用。"
@@ -98,10 +98,10 @@
     </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">hugo的使用</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/iimer" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>IIMER</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/tools/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>tools</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-15">2023-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 748 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-15">2023-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 758 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -110,34 +110,34 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#环境准备">环境准备</a></li>
-    <li><a href="#新建项目">新建项目</a></li>
-    <li><a href="#新建文件">新建文件</a></li>
-    <li><a href="#引入主题">引入主题</a>
+    <li><a href="#1-环境准备">1 环境准备</a></li>
+    <li><a href="#2-新建项目">2 新建项目</a></li>
+    <li><a href="#3-新建文件">3 新建文件</a></li>
+    <li><a href="#4-引入主题">4 引入主题</a>
       <ul>
-        <li><a href="#基本套路">基本套路</a></li>
-        <li><a href="#loveit">LoveIt</a></li>
+        <li><a href="#41-基本套路">4.1 基本套路</a></li>
+        <li><a href="#42-loveit">4.2 LoveIt</a></li>
       </ul>
     </li>
-    <li><a href="#部署发布">部署发布</a>
+    <li><a href="#5部署发布">5部署发布</a>
       <ul>
-        <li><a href="#部署github">部署github</a></li>
+        <li><a href="#51-部署github">5.1 部署github</a></li>
       </ul>
     </li>
-    <li><a href="#分离项目">分离项目</a></li>
-    <li><a href="#图片资源">图片资源</a></li>
+    <li><a href="#6-分离项目">6 分离项目</a></li>
+    <li><a href="#7-图片资源">7 图片资源</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="环境准备">环境准备</h2>
+            </div><div class="content" id="content"><h2 id="1-环境准备">1 环境准备</h2>
 <p>(<a href="https://www.gohugo.cn/getting-started/quick-start/" target="_blank" rel="noopener noreffer ">hugo中文网</a>)</p>
 <p><a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer ">hugo</a></p>
 <p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener noreffer ">git</a></p>
-<h2 id="新建项目">新建项目</h2>
+<h2 id="2-新建项目">2 新建项目</h2>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo new site <span class="o">[</span>项目名称<span class="o">]</span>
 </code></pre></div><p>进入项目根目录</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 本地启动</span>
 hugo server
-</code></pre></div><h2 id="新建文件">新建文件</h2>
+</code></pre></div><h2 id="3-新建文件">3 新建文件</h2>
 <p>进入项目根目录</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo new <span class="o">[</span>文件名<span class="o">]</span>
 </code></pre></div><p>新文件默认为草稿，对应draft: true。可以修改模板文件。</p>
@@ -147,8 +147,8 @@ hugo server
 <p>在创建完第一个文件后，可以在此文件目录下直接创建别的文件，不需要每次都敲代码。</p>
 <p>但必须保证开头的格式与第一个文件相同。</p>
 </blockquote>
-<h2 id="引入主题">引入主题</h2>
-<h3 id="基本套路">基本套路</h3>
+<h2 id="4-引入主题">4 引入主题</h2>
+<h3 id="41-基本套路">4.1 基本套路</h3>
 <ol>
 <li>
 <p>下载对应github的zip包，并解压到项目themes目录下。</p>
@@ -162,10 +162,10 @@ hugo server
 <p>其余按照主题特定的文档修改即可。</p>
 </li>
 </ol>
-<h3 id="loveit">LoveIt</h3>
+<h3 id="42-loveit">4.2 LoveIt</h3>
 <p><a href="https://hugoloveit.com/zh-cn/theme-documentation-basics/" target="_blank" rel="noopener noreffer ">主题文档</a></p>
-<h2 id="部署发布">部署发布</h2>
-<h3 id="部署github">部署github</h3>
+<h2 id="5部署发布">5部署发布</h2>
+<h3 id="51-部署github">5.1 部署github</h3>
 <p>项目根目录下，生成public文件夹（页面的静态文件）</p>
 <div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo
 </code></pre></div><p>创建仓库，格式为：[github用户名].github.io，如下图：</p>
@@ -179,7 +179,7 @@ hugo server
         title="github创建仓库" /></p>
 <p>将public文件夹提交到此仓库，为git基础操作，不再记录。</p>
 <p>访问对应的地址，如：https://iimer.github.io/</p>
-<h2 id="分离项目">分离项目</h2>
+<h2 id="6-分离项目">6 分离项目</h2>
 <p>一般我们记录博客是不会直接操作public里面的静态文件的，所以存储hugo项目才是最为重要的事情。</p>
 <p>分离主要是public和源hugo项目：</p>
 <ol>
@@ -189,7 +189,7 @@ hugo server
 <blockquote>
 <p>在我们写完博客后，要将以上两个项目分别提交。</p>
 </blockquote>
-<h2 id="图片资源">图片资源</h2>
+<h2 id="7-图片资源">7 图片资源</h2>
 <p>因为生成public文件的规则，图片路径为/-lib/images/[filename]/&hellip;</p>
 <p>本地用的是typora，存的是相对路径，对应的是../../static/-lib/images/[filename]/&hellip;</p>
 <p>在必要时需要把文件目录互换：</p>
@@ -236,5 +236,5 @@ hugo server
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
